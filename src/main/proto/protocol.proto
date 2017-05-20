@@ -1,0 +1,143 @@
+syntax = "proto2";
+
+package fantasia;
+
+option java_package = "io.fantasia.packet";
+option java_outer_classname = "Protos";
+
+
+message Packet{
+    optional Ping ping = 1;
+
+    optional Lobby lobby = 2;
+    optional JoinGame joinGame = 3;
+    optional LeaveGame leaveGame = 4;
+
+    optional Room room = 5;
+    optional PlayerJoined playerJoined = 6;
+    optional PlayerLeaved playerLeaved = 7;
+    optional Chat chat = 8;
+
+    optional GameStart gameStart = 9;
+    optional GameCurrentStatus gameCurrentStatus = 10;
+    optional GameEnd gameEnd = 11;
+    optional Update update = 12;
+    optional PlayerStering playerStering = 13;
+    optional Respawn respawn = 14;
+}
+
+message Ping {
+    required int32 data = 1;
+}
+
+//===========================
+//          LOBBY
+//===========================
+
+message Lobby {
+
+}
+
+message JoinGame {
+    required string name = 1;
+}
+
+message LeaveGame {
+
+}
+
+//===========================
+//           ROOM
+//===========================
+
+message Room {
+    repeated PlayerJoined players = 1;
+    required int32 localId = 2;
+}
+
+message PlayerJoined {
+    required int32 id = 1;
+    required string name = 2;
+}
+
+message PlayerLeaved {
+    required int32 id = 1;
+    required string reason = 2;
+}
+
+message Chat {
+    optional int32 playerId = 1;
+    required string text = 2;
+}
+
+message PlayerStering {
+    optional float dirX = 1;
+    optional float dirY = 2;
+    optional float barrelDirX = 3;
+    optional float barrelDirY = 4;
+    optional bool accelerates = 5;
+    optional bool shot= 6;
+}
+
+message Respawn {
+
+}
+
+
+//===========================
+//           GAME
+//===========================
+
+message GameStart {
+
+}
+
+message GameCurrentStatus {
+
+}
+
+message GameEnd {
+
+}
+
+message Player {
+    optional int32 id = 1;
+    optional float positionX = 2;
+    optional float postionY = 3;
+    optional float tankCourse = 4;
+    optional float barrelCourse = 5;
+}
+
+message Dead {
+    optional int32 id = 1;
+    optional float positionX = 2;
+    optional float positionY = 3;
+}
+
+message Hit {
+    enum Target {
+    NONE = 0;
+    GROUND = 1;
+    TANK = 2;
+    }
+    optional float positionX = 1;
+    optional float positionY = 2;
+    optional Target target = 3;
+
+}
+
+message UpdateGamePlay {
+    repeated Player player = 1;
+}
+
+message Update {
+    // Event, podobnie jak Packet powinien być serią optionalli, każdy opisujący jakieś wydarzenie w grze, np. nowe entity, przesuniecie gracza, zdobycie punktów itp.
+    message Event{
+        optional UpdateGamePlay updateGamePlay = 1;
+        optional Dead dead = 2;
+        optional Hit hit = 3;
+    }
+
+    repeated Event events = 1;
+}
+
