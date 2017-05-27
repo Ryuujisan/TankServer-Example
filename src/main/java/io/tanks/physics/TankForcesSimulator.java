@@ -3,8 +3,8 @@ package io.tanks.physics;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.Body;
 
-import static Physic.Physics.FPS60;
-import static Physic.Physics.PI;
+import static io.tanks.physics.Physics.FPS60;
+import static io.tanks.physics.Physics.PI;
 
 public class TankForcesSimulator {
 

@@ -15,6 +15,10 @@ class PacketHandler extends AbstractPacketHandler {
         if (message.packet.hasChat()) {
             chat(message.player, message.packet.getChat());
         }
+
+        if (message.packet.hasPlayerStering()) {
+            ProtoUtils.playerSteering((Player)message.player, message.packet.getPlayerStering());
+        }
     }
 
     private void chat(AbstractPlayer player, Protos.Chat chat) {
