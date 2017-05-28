@@ -17,9 +17,11 @@ class ProtoUtils {
 
     public static void playerSteering(Player player, Protos.PlayerStering packet) {
         if (packet.hasDirX() && packet.hasDirY()) player.getTank().setDirectionalVector(packet.getDirX(), packet.getDirX());
-        if (packet.hasBarrelDirX() && packet.hasBarrelDirY()) player.getTank().setAimingVector(packet.getBarrelDirX(), packet.getBarrelDirY());
-        if (packet.hasAccelerates()) player.getTank().setAccelerating(packet.getAccelerates());
+        if (packet.hasBarrelDirX() && packet.hasBarrelDirY()) {
+            player.getTank().setAimingVector(packet.getBarrelDirX(), packet.getBarrelDirY());
+        }
         if (packet.hasShot()) player.getTank().setShooting(packet.getShot());
+        player.getTank().setAccelerating(packet.hasAccelerates());
     }
 
     private static Protos.Player player(Player player) {

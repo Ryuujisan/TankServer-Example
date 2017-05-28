@@ -13,7 +13,6 @@ class Game extends AbstractGame {
 
     public Game(AbstractRoom room) {
         super(room);
-        physics = new Physics();
     }
 
     public Physics getPhysics() {
@@ -22,6 +21,7 @@ class Game extends AbstractGame {
 
     @Override protected void onStart() {
         System.out.println("Game has started.");
+        physics = new Physics();
     }
 
     @Override protected void onSimulate(float dt) {

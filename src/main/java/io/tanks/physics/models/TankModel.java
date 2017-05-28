@@ -9,7 +9,7 @@ public abstract class TankModel {
     protected static final float DEFAULT_DRIFT_MULTIPLIER = -0.075f;
     protected static final float DEFAULT_BREAKING_SPEED = 0.97f;
     protected static final float DEFAULT_BARREL_TURNING_SPEED = 20f;
-    protected static final float DEFAULT_SPEED = 15f;
+    protected static final float DEFAULT_SPEED = 1.5f;
     protected static final float DEFAULT_BULLET_RANGE = 40f;
     private static final float BULLET_RADIUS = 5f;
 

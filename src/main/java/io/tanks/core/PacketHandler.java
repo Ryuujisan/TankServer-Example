@@ -17,6 +17,7 @@ class PacketHandler extends AbstractPacketHandler {
         }
 
         if (message.packet.hasPlayerStering()) {
+            System.out.println(message.packet);
             ProtoUtils.playerSteering((Player)message.player, message.packet.getPlayerStering());
         }
     }

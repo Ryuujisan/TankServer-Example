@@ -38,11 +38,11 @@ public class Tank {
     }
 
     public float getAimingVectorsAngleInDegrees() {
-        return angle(aimingVector);
+        return angle(aimingVector) - 90;
     }
 
     public float getAimingVectorsAngleInRadians() {
-        return Utils.degreesToRadians(angle(aimingVector));
+        return Utils.degreesToRadians(angle(aimingVector)) - (float) Math.PI / 2;
     }
 
     public void setDirectionalVector(float x, float y) {
@@ -67,10 +67,6 @@ public class Tank {
 
     public float getStartingAngle() {
         return 0f;
-    }
-
-    public float getBodyAngleInDegrees() {
-        return Utils.radiansToDegrees(body.getAngle() - Physics.PI/2);
     }
 
     public float getBodyAngleInRadians() {
