@@ -59,6 +59,18 @@ public class ProtoUtils {
                                 .setPosY(bullet.getBody().getPosition().y)
                                 .setVelX(bullet.getBody().getLinearVelocity().x)
                                 .setVelY(bullet.getBody().getLinearVelocity().y)
+                                .setRange(bullet.getBulletRange())
+                                .build()
+                ).build();
+    }
+
+    public static Protos.Update.Event bulletHit(Bullet bullet, Protos.Hit.Target target) {
+        return Protos.Update.Event.newBuilder()
+                .setHit(
+                        Protos.Hit.newBuilder()
+                                .setPositionX(bullet.getBody().getPosition().x)
+                                .setPositionY(bullet.getBody().getPosition().y)
+                                .setTarget(target)
                                 .build()
                 ).build();
     }

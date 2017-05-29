@@ -1,6 +1,8 @@
 package io.tanks.physics;
 
 
+import io.fantasia.packet.Protos;
+import io.tanks.core.ProtoUtils;
 import org.jbox2d.callbacks.ContactImpulse;
 import org.jbox2d.callbacks.ContactListener;
 import org.jbox2d.collision.Manifold;
@@ -33,6 +35,7 @@ public class ContactHandler implements ContactListener {
 
             if (tank.gotShot(bullet)) {
                 bullet.destroyBullet();
+                bullet.getTank().getPhysics().addEvent(ProtoUtils.bulletHit(bullet, Protos.Hit.Target.TANK));
             }
         }
     }

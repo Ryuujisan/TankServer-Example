@@ -1,5 +1,6 @@
 package io.tanks.physics;
 
+import io.fantasia.packet.Protos;
 import io.tanks.core.ProtoUtils;
 import org.jbox2d.collision.shapes.CircleShape;
 import org.jbox2d.common.Vec2;
@@ -32,6 +33,10 @@ public class Bullet {
     private void calculateBulletLifelength(float range) {
         //TODO uzaleznic od DT
         bulletLifelength = (long) (range / bulletVelocity * 1000);
+    }
+
+    public float getBulletRange() {
+        return bulletLifelength * bulletVelocity;
     }
 
     public int getID() {
@@ -67,6 +72,7 @@ public class Bullet {
     public void update() {
         if (System.currentTimeMillis() - spawnTimestamp > bulletLifelength) {
             destroyBullet();
+            tank.getPhysics().addEvent(ProtoUtils.bulletHit(this, Protos.Hit.Target.GROUND));
         }
     }
 
