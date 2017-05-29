@@ -1,5 +1,6 @@
 package io.tanks.physics;
 
+import io.tanks.core.ProtoUtils;
 import org.jbox2d.collision.shapes.CircleShape;
 import org.jbox2d.common.Vec2;
 import org.jbox2d.dynamics.*;
@@ -14,17 +15,27 @@ public class Bullet {
     private long spawnTimestamp;
     private long bulletLifelength;
     private Body body;
+    private static int IDs = 0;
+    private int id;
 
 
     public Bullet(Tank tank, Vec2 position, Vec2 direction) {
+        System.out.println("Shooting");
         this.tank = tank;
         spawn(tank.getBody().getWorld(), position, direction);
         calculateBulletLifelength(tank.getModel().getBulletRange());
+        IDs++;
+        id = IDs;
+        tank.getPhysics().addEvent(ProtoUtils.bulletFire(this));
     }
 
     private void calculateBulletLifelength(float range) {
         //TODO uzaleznic od DT
         bulletLifelength = (long) (range / bulletVelocity * 1000);
+    }
+
+    public int getID() {
+        return id;
     }
 
     private void spawn(World world, Vec2 position, Vec2 direction) {

@@ -785,6 +785,12 @@ public final class Protos {
           return false;
         }
       }
+      if (hasUpdate()) {
+        if (!getUpdate().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -994,7 +1000,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPing()) {
         hash = (37 * hash) + PING_FIELD_NUMBER;
         hash = (53 * hash) + getPing().hashCode();
@@ -1520,6 +1526,11 @@ public final class Protos {
         }
         if (hasChat()) {
           if (!getChat().isInitialized()) {
+            return false;
+          }
+        }
+        if (hasUpdate()) {
+          if (!getUpdate().isInitialized()) {
             return false;
           }
         }
@@ -3409,7 +3420,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasData()) {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData();
@@ -3834,7 +3845,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4287,7 +4298,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasName()) {
         hash = (37 * hash) + NAME_FIELD_NUMBER;
         hash = (53 * hash) + getName().hashCode();
@@ -4758,7 +4769,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5266,7 +5277,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getPlayersCount() > 0) {
         hash = (37 * hash) + PLAYERS_FIELD_NUMBER;
         hash = (53 * hash) + getPlayersList().hashCode();
@@ -6108,7 +6119,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId();
@@ -6753,7 +6764,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId();
@@ -7394,7 +7405,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPlayerId()) {
         hash = (37 * hash) + PLAYERID_FIELD_NUMBER;
         hash = (53 * hash) + getPlayerId();
@@ -8172,7 +8183,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasDirX()) {
         hash = (37 * hash) + DIRX_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
@@ -8825,7 +8836,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9198,7 +9209,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9571,7 +9582,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -9944,7 +9955,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -10537,7 +10548,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId();
@@ -11275,7 +11286,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasId()) {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId();
@@ -12026,7 +12037,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (hasPositionX()) {
         hash = (37 * hash) + POSITIONX_FIELD_NUMBER;
         hash = (53 * hash) + java.lang.Float.floatToIntBits(
@@ -12626,7 +12637,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getPlayerCount() > 0) {
         hash = (37 * hash) + PLAYER_FIELD_NUMBER;
         hash = (53 * hash) + getPlayerList().hashCode();
@@ -13171,6 +13182,964 @@ public final class Protos {
 
   }
 
+  public interface BulletFireOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:fantasia.BulletFire)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>required int32 bulletID = 1;</code>
+     */
+    boolean hasBulletID();
+    /**
+     * <code>required int32 bulletID = 1;</code>
+     */
+    int getBulletID();
+
+    /**
+     * <code>required float posX = 2;</code>
+     */
+    boolean hasPosX();
+    /**
+     * <code>required float posX = 2;</code>
+     */
+    float getPosX();
+
+    /**
+     * <code>required float posY = 3;</code>
+     */
+    boolean hasPosY();
+    /**
+     * <code>required float posY = 3;</code>
+     */
+    float getPosY();
+
+    /**
+     * <code>required float velX = 4;</code>
+     */
+    boolean hasVelX();
+    /**
+     * <code>required float velX = 4;</code>
+     */
+    float getVelX();
+
+    /**
+     * <code>required float velY = 5;</code>
+     */
+    boolean hasVelY();
+    /**
+     * <code>required float velY = 5;</code>
+     */
+    float getVelY();
+
+    /**
+     * <code>required float range = 6;</code>
+     */
+    boolean hasRange();
+    /**
+     * <code>required float range = 6;</code>
+     */
+    float getRange();
+  }
+  /**
+   * Protobuf type {@code fantasia.BulletFire}
+   */
+  public  static final class BulletFire extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:fantasia.BulletFire)
+      BulletFireOrBuilder {
+    // Use BulletFire.newBuilder() to construct.
+    private BulletFire(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BulletFire() {
+      bulletID_ = 0;
+      posX_ = 0F;
+      posY_ = 0F;
+      velX_ = 0F;
+      velY_ = 0F;
+      range_ = 0F;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BulletFire(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              bulletID_ = input.readInt32();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              posX_ = input.readFloat();
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              posY_ = input.readFloat();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              velX_ = input.readFloat();
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000010;
+              velY_ = input.readFloat();
+              break;
+            }
+            case 53: {
+              bitField0_ |= 0x00000020;
+              range_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.fantasia.packet.Protos.internal_static_fantasia_BulletFire_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.fantasia.packet.Protos.internal_static_fantasia_BulletFire_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.fantasia.packet.Protos.BulletFire.class, io.fantasia.packet.Protos.BulletFire.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int BULLETID_FIELD_NUMBER = 1;
+    private int bulletID_;
+    /**
+     * <code>required int32 bulletID = 1;</code>
+     */
+    public boolean hasBulletID() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 bulletID = 1;</code>
+     */
+    public int getBulletID() {
+      return bulletID_;
+    }
+
+    public static final int POSX_FIELD_NUMBER = 2;
+    private float posX_;
+    /**
+     * <code>required float posX = 2;</code>
+     */
+    public boolean hasPosX() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required float posX = 2;</code>
+     */
+    public float getPosX() {
+      return posX_;
+    }
+
+    public static final int POSY_FIELD_NUMBER = 3;
+    private float posY_;
+    /**
+     * <code>required float posY = 3;</code>
+     */
+    public boolean hasPosY() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>required float posY = 3;</code>
+     */
+    public float getPosY() {
+      return posY_;
+    }
+
+    public static final int VELX_FIELD_NUMBER = 4;
+    private float velX_;
+    /**
+     * <code>required float velX = 4;</code>
+     */
+    public boolean hasVelX() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required float velX = 4;</code>
+     */
+    public float getVelX() {
+      return velX_;
+    }
+
+    public static final int VELY_FIELD_NUMBER = 5;
+    private float velY_;
+    /**
+     * <code>required float velY = 5;</code>
+     */
+    public boolean hasVelY() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>required float velY = 5;</code>
+     */
+    public float getVelY() {
+      return velY_;
+    }
+
+    public static final int RANGE_FIELD_NUMBER = 6;
+    private float range_;
+    /**
+     * <code>required float range = 6;</code>
+     */
+    public boolean hasRange() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>required float range = 6;</code>
+     */
+    public float getRange() {
+      return range_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      if (!hasBulletID()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPosX()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPosY()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVelX()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasVelY()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasRange()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, bulletID_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, posX_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(3, posY_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(4, velX_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeFloat(5, velY_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeFloat(6, range_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, bulletID_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, posX_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, posY_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, velX_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, velY_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(6, range_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.fantasia.packet.Protos.BulletFire)) {
+        return super.equals(obj);
+      }
+      io.fantasia.packet.Protos.BulletFire other = (io.fantasia.packet.Protos.BulletFire) obj;
+
+      boolean result = true;
+      result = result && (hasBulletID() == other.hasBulletID());
+      if (hasBulletID()) {
+        result = result && (getBulletID()
+            == other.getBulletID());
+      }
+      result = result && (hasPosX() == other.hasPosX());
+      if (hasPosX()) {
+        result = result && (
+            java.lang.Float.floatToIntBits(getPosX())
+            == java.lang.Float.floatToIntBits(
+                other.getPosX()));
+      }
+      result = result && (hasPosY() == other.hasPosY());
+      if (hasPosY()) {
+        result = result && (
+            java.lang.Float.floatToIntBits(getPosY())
+            == java.lang.Float.floatToIntBits(
+                other.getPosY()));
+      }
+      result = result && (hasVelX() == other.hasVelX());
+      if (hasVelX()) {
+        result = result && (
+            java.lang.Float.floatToIntBits(getVelX())
+            == java.lang.Float.floatToIntBits(
+                other.getVelX()));
+      }
+      result = result && (hasVelY() == other.hasVelY());
+      if (hasVelY()) {
+        result = result && (
+            java.lang.Float.floatToIntBits(getVelY())
+            == java.lang.Float.floatToIntBits(
+                other.getVelY()));
+      }
+      result = result && (hasRange() == other.hasRange());
+      if (hasRange()) {
+        result = result && (
+            java.lang.Float.floatToIntBits(getRange())
+            == java.lang.Float.floatToIntBits(
+                other.getRange()));
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBulletID()) {
+        hash = (37 * hash) + BULLETID_FIELD_NUMBER;
+        hash = (53 * hash) + getBulletID();
+      }
+      if (hasPosX()) {
+        hash = (37 * hash) + POSX_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getPosX());
+      }
+      if (hasPosY()) {
+        hash = (37 * hash) + POSY_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getPosY());
+      }
+      if (hasVelX()) {
+        hash = (37 * hash) + VELX_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getVelX());
+      }
+      if (hasVelY()) {
+        hash = (37 * hash) + VELY_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getVelY());
+      }
+      if (hasRange()) {
+        hash = (37 * hash) + RANGE_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getRange());
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.fantasia.packet.Protos.BulletFire parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.fantasia.packet.Protos.BulletFire prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code fantasia.BulletFire}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:fantasia.BulletFire)
+        io.fantasia.packet.Protos.BulletFireOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.fantasia.packet.Protos.internal_static_fantasia_BulletFire_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.fantasia.packet.Protos.internal_static_fantasia_BulletFire_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.fantasia.packet.Protos.BulletFire.class, io.fantasia.packet.Protos.BulletFire.Builder.class);
+      }
+
+      // Construct using io.fantasia.packet.Protos.BulletFire.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        bulletID_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        posX_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        posY_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        velX_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        velY_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        range_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.fantasia.packet.Protos.internal_static_fantasia_BulletFire_descriptor;
+      }
+
+      public io.fantasia.packet.Protos.BulletFire getDefaultInstanceForType() {
+        return io.fantasia.packet.Protos.BulletFire.getDefaultInstance();
+      }
+
+      public io.fantasia.packet.Protos.BulletFire build() {
+        io.fantasia.packet.Protos.BulletFire result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public io.fantasia.packet.Protos.BulletFire buildPartial() {
+        io.fantasia.packet.Protos.BulletFire result = new io.fantasia.packet.Protos.BulletFire(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bulletID_ = bulletID_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.posX_ = posX_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.posY_ = posY_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.velX_ = velX_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.velY_ = velY_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.range_ = range_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.fantasia.packet.Protos.BulletFire) {
+          return mergeFrom((io.fantasia.packet.Protos.BulletFire)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.fantasia.packet.Protos.BulletFire other) {
+        if (other == io.fantasia.packet.Protos.BulletFire.getDefaultInstance()) return this;
+        if (other.hasBulletID()) {
+          setBulletID(other.getBulletID());
+        }
+        if (other.hasPosX()) {
+          setPosX(other.getPosX());
+        }
+        if (other.hasPosY()) {
+          setPosY(other.getPosY());
+        }
+        if (other.hasVelX()) {
+          setVelX(other.getVelX());
+        }
+        if (other.hasVelY()) {
+          setVelY(other.getVelY());
+        }
+        if (other.hasRange()) {
+          setRange(other.getRange());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasBulletID()) {
+          return false;
+        }
+        if (!hasPosX()) {
+          return false;
+        }
+        if (!hasPosY()) {
+          return false;
+        }
+        if (!hasVelX()) {
+          return false;
+        }
+        if (!hasVelY()) {
+          return false;
+        }
+        if (!hasRange()) {
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        io.fantasia.packet.Protos.BulletFire parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (io.fantasia.packet.Protos.BulletFire) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int bulletID_ ;
+      /**
+       * <code>required int32 bulletID = 1;</code>
+       */
+      public boolean hasBulletID() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 bulletID = 1;</code>
+       */
+      public int getBulletID() {
+        return bulletID_;
+      }
+      /**
+       * <code>required int32 bulletID = 1;</code>
+       */
+      public Builder setBulletID(int value) {
+        bitField0_ |= 0x00000001;
+        bulletID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 bulletID = 1;</code>
+       */
+      public Builder clearBulletID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bulletID_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float posX_ ;
+      /**
+       * <code>required float posX = 2;</code>
+       */
+      public boolean hasPosX() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required float posX = 2;</code>
+       */
+      public float getPosX() {
+        return posX_;
+      }
+      /**
+       * <code>required float posX = 2;</code>
+       */
+      public Builder setPosX(float value) {
+        bitField0_ |= 0x00000002;
+        posX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float posX = 2;</code>
+       */
+      public Builder clearPosX() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        posX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float posY_ ;
+      /**
+       * <code>required float posY = 3;</code>
+       */
+      public boolean hasPosY() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>required float posY = 3;</code>
+       */
+      public float getPosY() {
+        return posY_;
+      }
+      /**
+       * <code>required float posY = 3;</code>
+       */
+      public Builder setPosY(float value) {
+        bitField0_ |= 0x00000004;
+        posY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float posY = 3;</code>
+       */
+      public Builder clearPosY() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        posY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float velX_ ;
+      /**
+       * <code>required float velX = 4;</code>
+       */
+      public boolean hasVelX() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required float velX = 4;</code>
+       */
+      public float getVelX() {
+        return velX_;
+      }
+      /**
+       * <code>required float velX = 4;</code>
+       */
+      public Builder setVelX(float value) {
+        bitField0_ |= 0x00000008;
+        velX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float velX = 4;</code>
+       */
+      public Builder clearVelX() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        velX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float velY_ ;
+      /**
+       * <code>required float velY = 5;</code>
+       */
+      public boolean hasVelY() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>required float velY = 5;</code>
+       */
+      public float getVelY() {
+        return velY_;
+      }
+      /**
+       * <code>required float velY = 5;</code>
+       */
+      public Builder setVelY(float value) {
+        bitField0_ |= 0x00000010;
+        velY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float velY = 5;</code>
+       */
+      public Builder clearVelY() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        velY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float range_ ;
+      /**
+       * <code>required float range = 6;</code>
+       */
+      public boolean hasRange() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>required float range = 6;</code>
+       */
+      public float getRange() {
+        return range_;
+      }
+      /**
+       * <code>required float range = 6;</code>
+       */
+      public Builder setRange(float value) {
+        bitField0_ |= 0x00000020;
+        range_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required float range = 6;</code>
+       */
+      public Builder clearRange() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        range_ = 0F;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:fantasia.BulletFire)
+    }
+
+    // @@protoc_insertion_point(class_scope:fantasia.BulletFire)
+    private static final io.fantasia.packet.Protos.BulletFire DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.fantasia.packet.Protos.BulletFire();
+    }
+
+    public static io.fantasia.packet.Protos.BulletFire getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<BulletFire>
+        PARSER = new com.google.protobuf.AbstractParser<BulletFire>() {
+      public BulletFire parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BulletFire(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BulletFire> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BulletFire> getParserForType() {
+      return PARSER;
+    }
+
+    public io.fantasia.packet.Protos.BulletFire getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UpdateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:fantasia.Update)
       com.google.protobuf.MessageOrBuilder {
@@ -13320,6 +14289,19 @@ public final class Protos {
        * <code>optional .fantasia.Hit hit = 3;</code>
        */
       io.fantasia.packet.Protos.HitOrBuilder getHitOrBuilder();
+
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      boolean hasBulletFire();
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      io.fantasia.packet.Protos.BulletFire getBulletFire();
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      io.fantasia.packet.Protos.BulletFireOrBuilder getBulletFireOrBuilder();
     }
     /**
      * <pre>
@@ -13404,6 +14386,19 @@ public final class Protos {
                   hit_ = subBuilder.buildPartial();
                 }
                 bitField0_ |= 0x00000004;
+                break;
+              }
+              case 34: {
+                io.fantasia.packet.Protos.BulletFire.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                  subBuilder = bulletFire_.toBuilder();
+                }
+                bulletFire_ = input.readMessage(io.fantasia.packet.Protos.BulletFire.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(bulletFire_);
+                  bulletFire_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000008;
                 break;
               }
             }
@@ -13494,12 +14489,39 @@ public final class Protos {
         return hit_ == null ? io.fantasia.packet.Protos.Hit.getDefaultInstance() : hit_;
       }
 
+      public static final int BULLETFIRE_FIELD_NUMBER = 4;
+      private io.fantasia.packet.Protos.BulletFire bulletFire_;
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      public boolean hasBulletFire() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      public io.fantasia.packet.Protos.BulletFire getBulletFire() {
+        return bulletFire_ == null ? io.fantasia.packet.Protos.BulletFire.getDefaultInstance() : bulletFire_;
+      }
+      /**
+       * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+       */
+      public io.fantasia.packet.Protos.BulletFireOrBuilder getBulletFireOrBuilder() {
+        return bulletFire_ == null ? io.fantasia.packet.Protos.BulletFire.getDefaultInstance() : bulletFire_;
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
+        if (hasBulletFire()) {
+          if (!getBulletFire().isInitialized()) {
+            memoizedIsInitialized = 0;
+            return false;
+          }
+        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -13514,6 +14536,9 @@ public final class Protos {
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           output.writeMessage(3, getHit());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeMessage(4, getBulletFire());
         }
         unknownFields.writeTo(output);
       }
@@ -13534,6 +14559,10 @@ public final class Protos {
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getHit());
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getBulletFire());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -13567,6 +14596,11 @@ public final class Protos {
           result = result && getHit()
               .equals(other.getHit());
         }
+        result = result && (hasBulletFire() == other.hasBulletFire());
+        if (hasBulletFire()) {
+          result = result && getBulletFire()
+              .equals(other.getBulletFire());
+        }
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -13577,7 +14611,7 @@ public final class Protos {
           return memoizedHashCode;
         }
         int hash = 41;
-        hash = (19 * hash) + getDescriptorForType().hashCode();
+        hash = (19 * hash) + getDescriptor().hashCode();
         if (hasUpdateGamePlay()) {
           hash = (37 * hash) + UPDATEGAMEPLAY_FIELD_NUMBER;
           hash = (53 * hash) + getUpdateGamePlay().hashCode();
@@ -13589,6 +14623,10 @@ public final class Protos {
         if (hasHit()) {
           hash = (37 * hash) + HIT_FIELD_NUMBER;
           hash = (53 * hash) + getHit().hashCode();
+        }
+        if (hasBulletFire()) {
+          hash = (37 * hash) + BULLETFIRE_FIELD_NUMBER;
+          hash = (53 * hash) + getBulletFire().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -13711,6 +14749,7 @@ public final class Protos {
             getUpdateGamePlayFieldBuilder();
             getDeadFieldBuilder();
             getHitFieldBuilder();
+            getBulletFireFieldBuilder();
           }
         }
         public Builder clear() {
@@ -13733,6 +14772,12 @@ public final class Protos {
             hitBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000004);
+          if (bulletFireBuilder_ == null) {
+            bulletFire_ = null;
+          } else {
+            bulletFireBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
           return this;
         }
 
@@ -13780,6 +14825,14 @@ public final class Protos {
             result.hit_ = hit_;
           } else {
             result.hit_ = hitBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          if (bulletFireBuilder_ == null) {
+            result.bulletFire_ = bulletFire_;
+          } else {
+            result.bulletFire_ = bulletFireBuilder_.build();
           }
           result.bitField0_ = to_bitField0_;
           onBuilt();
@@ -13832,12 +14885,20 @@ public final class Protos {
           if (other.hasHit()) {
             mergeHit(other.getHit());
           }
+          if (other.hasBulletFire()) {
+            mergeBulletFire(other.getBulletFire());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
         }
 
         public final boolean isInitialized() {
+          if (hasBulletFire()) {
+            if (!getBulletFire().isInitialized()) {
+              return false;
+            }
+          }
           return true;
         }
 
@@ -14213,6 +15274,124 @@ public final class Protos {
           }
           return hitBuilder_;
         }
+
+        private io.fantasia.packet.Protos.BulletFire bulletFire_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.fantasia.packet.Protos.BulletFire, io.fantasia.packet.Protos.BulletFire.Builder, io.fantasia.packet.Protos.BulletFireOrBuilder> bulletFireBuilder_;
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public boolean hasBulletFire() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public io.fantasia.packet.Protos.BulletFire getBulletFire() {
+          if (bulletFireBuilder_ == null) {
+            return bulletFire_ == null ? io.fantasia.packet.Protos.BulletFire.getDefaultInstance() : bulletFire_;
+          } else {
+            return bulletFireBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public Builder setBulletFire(io.fantasia.packet.Protos.BulletFire value) {
+          if (bulletFireBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bulletFire_ = value;
+            onChanged();
+          } else {
+            bulletFireBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public Builder setBulletFire(
+            io.fantasia.packet.Protos.BulletFire.Builder builderForValue) {
+          if (bulletFireBuilder_ == null) {
+            bulletFire_ = builderForValue.build();
+            onChanged();
+          } else {
+            bulletFireBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public Builder mergeBulletFire(io.fantasia.packet.Protos.BulletFire value) {
+          if (bulletFireBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) == 0x00000008) &&
+                bulletFire_ != null &&
+                bulletFire_ != io.fantasia.packet.Protos.BulletFire.getDefaultInstance()) {
+              bulletFire_ =
+                io.fantasia.packet.Protos.BulletFire.newBuilder(bulletFire_).mergeFrom(value).buildPartial();
+            } else {
+              bulletFire_ = value;
+            }
+            onChanged();
+          } else {
+            bulletFireBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public Builder clearBulletFire() {
+          if (bulletFireBuilder_ == null) {
+            bulletFire_ = null;
+            onChanged();
+          } else {
+            bulletFireBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public io.fantasia.packet.Protos.BulletFire.Builder getBulletFireBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getBulletFireFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        public io.fantasia.packet.Protos.BulletFireOrBuilder getBulletFireOrBuilder() {
+          if (bulletFireBuilder_ != null) {
+            return bulletFireBuilder_.getMessageOrBuilder();
+          } else {
+            return bulletFire_ == null ?
+                io.fantasia.packet.Protos.BulletFire.getDefaultInstance() : bulletFire_;
+          }
+        }
+        /**
+         * <code>optional .fantasia.BulletFire bulletFire = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            io.fantasia.packet.Protos.BulletFire, io.fantasia.packet.Protos.BulletFire.Builder, io.fantasia.packet.Protos.BulletFireOrBuilder> 
+            getBulletFireFieldBuilder() {
+          if (bulletFireBuilder_ == null) {
+            bulletFireBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                io.fantasia.packet.Protos.BulletFire, io.fantasia.packet.Protos.BulletFire.Builder, io.fantasia.packet.Protos.BulletFireOrBuilder>(
+                    getBulletFire(),
+                    getParentForChildren(),
+                    isClean());
+            bulletFire_ = null;
+          }
+          return bulletFireBuilder_;
+        }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFields(unknownFields);
@@ -14303,6 +15482,12 @@ public final class Protos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
+      for (int i = 0; i < getEventsCount(); i++) {
+        if (!getEvents(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -14353,7 +15538,7 @@ public final class Protos {
         return memoizedHashCode;
       }
       int hash = 41;
-      hash = (19 * hash) + getDescriptorForType().hashCode();
+      hash = (19 * hash) + getDescriptor().hashCode();
       if (getEventsCount() > 0) {
         hash = (37 * hash) + EVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getEventsList().hashCode();
@@ -14588,6 +15773,11 @@ public final class Protos {
       }
 
       public final boolean isInitialized() {
+        for (int i = 0; i < getEventsCount(); i++) {
+          if (!getEvents(i).isInitialized()) {
+            return false;
+          }
+        }
         return true;
       }
 
@@ -14989,6 +16179,11 @@ public final class Protos {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_fantasia_UpdateGamePlay_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_fantasia_BulletFire_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_fantasia_BulletFire_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_fantasia_Update_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15040,12 +16235,16 @@ public final class Protos {
       "(\002\022\021\n\tpositionY\030\002 \001(\002\022$\n\006target\030\003 \001(\0162\024." +
       "fantasia.Hit.Target\"(\n\006Target\022\010\n\004NONE\020\000\022" +
       "\n\n\006GROUND\020\001\022\010\n\004TANK\020\002\"2\n\016UpdateGamePlay\022" +
-      " \n\006player\030\001 \003(\0132\020.fantasia.Player\"\245\001\n\006Up" +
-      "date\022&\n\006events\030\001 \003(\0132\026.fantasia.Update.E" +
-      "vent\032s\n\005Event\0220\n\016updateGamePlay\030\001 \001(\0132\030." +
-      "fantasia.UpdateGamePlay\022\034\n\004dead\030\002 \001(\0132\016." +
-      "fantasia.Dead\022\032\n\003hit\030\003 \001(\0132\r.fantasia.Hi" +
-      "tB\034\n\022io.fantasia.packetB\006Protos"
+      " \n\006player\030\001 \003(\0132\020.fantasia.Player\"e\n\nBul" +
+      "letFire\022\020\n\010bulletID\030\001 \002(\005\022\014\n\004posX\030\002 \002(\002\022" +
+      "\014\n\004posY\030\003 \002(\002\022\014\n\004velX\030\004 \002(\002\022\014\n\004velY\030\005 \002(" +
+      "\002\022\r\n\005range\030\006 \002(\002\"\320\001\n\006Update\022&\n\006events\030\001 " +
+      "\003(\0132\026.fantasia.Update.Event\032\235\001\n\005Event\0220\n" +
+      "\016updateGamePlay\030\001 \001(\0132\030.fantasia.UpdateG" +
+      "amePlay\022\034\n\004dead\030\002 \001(\0132\016.fantasia.Dead\022\032\n",
+      "\003hit\030\003 \001(\0132\r.fantasia.Hit\022(\n\nbulletFire\030" +
+      "\004 \001(\0132\024.fantasia.BulletFireB\034\n\022io.fantas" +
+      "ia.packetB\006Protos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15167,8 +16366,14 @@ public final class Protos {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fantasia_UpdateGamePlay_descriptor,
         new java.lang.String[] { "Player", });
-    internal_static_fantasia_Update_descriptor =
+    internal_static_fantasia_BulletFire_descriptor =
       getDescriptor().getMessageTypes().get(18);
+    internal_static_fantasia_BulletFire_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_fantasia_BulletFire_descriptor,
+        new java.lang.String[] { "BulletID", "PosX", "PosY", "VelX", "VelY", "Range", });
+    internal_static_fantasia_Update_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_fantasia_Update_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fantasia_Update_descriptor,
@@ -15178,7 +16383,7 @@ public final class Protos {
     internal_static_fantasia_Update_Event_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_fantasia_Update_Event_descriptor,
-        new java.lang.String[] { "UpdateGamePlay", "Dead", "Hit", });
+        new java.lang.String[] { "UpdateGamePlay", "Dead", "Hit", "BulletFire", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

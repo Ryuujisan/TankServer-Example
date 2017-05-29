@@ -2,6 +2,8 @@ package io.tanks.physics;
 
 
 
+import io.fantasia.packet.Protos;
+import io.fantasia.room.AbstractGame;
 import org.jbox2d.collision.shapes.CircleShape;
 import org.jbox2d.collision.shapes.PolygonShape;
 import org.jbox2d.common.Vec2;
@@ -10,6 +12,7 @@ import org.jbox2d.dynamics.*;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
+import io.tanks.core.*;
 
 /**
  * Created by bezik on 04.02.17.
@@ -30,12 +33,19 @@ public class Physics {
 
     private ContactHandler contactHandler;
 
-    public Physics() {
+    private Game game;
+
+    public Physics(Game game) {
         Vec2 gravity = new Vec2(0.0f, 0.0f);
         world = new World(gravity);
         bodiesScheduledToDestroy = new ArrayList<Body>();
         contactHandler = new ContactHandler();
         world.setContactListener(contactHandler);
+        this.game = game;
+    }
+
+    public void addEvent(Protos.Update.Event event) {
+        game.addEvent(event, AbstractGame.EventFilter.everyone);
     }
 
     public void simulateWorld() {

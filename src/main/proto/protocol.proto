@@ -130,12 +130,22 @@ message UpdateGamePlay {
     repeated Player player = 1;
 }
 
+message BulletFire {
+    required int32 bulletID = 1;
+    required float posX = 2;
+    required float posY = 3;
+    required float velX = 4;
+    required float velY = 5;
+    required float range = 6;
+}
+
 message Update {
     // Event, podobnie jak Packet powinien być serią optionalli, każdy opisujący jakieś wydarzenie w grze, np. nowe entity, przesuniecie gracza, zdobycie punktów itp.
     message Event{
         optional UpdateGamePlay updateGamePlay = 1;
         optional Dead dead = 2;
         optional Hit hit = 3;
+        optional BulletFire  bulletFire = 4;
     }
 
     repeated Event events = 1;

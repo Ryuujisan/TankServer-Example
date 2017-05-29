@@ -7,12 +7,13 @@ import io.fantasia.room.AbstractRoom;
 import io.tanks.physics.Physics;
 
 
-class Game extends AbstractGame {
+public class Game extends AbstractGame {
 
     private Physics physics;
 
     public Game(AbstractRoom room) {
         super(room);
+        physics = new Physics(this);
     }
 
     public Physics getPhysics() {
@@ -21,10 +22,12 @@ class Game extends AbstractGame {
 
     @Override protected void onStart() {
         System.out.println("Game has started.");
-        physics = new Physics();
     }
 
     @Override protected void onSimulate(float dt) {
+        if (physics == null) {
+            return;
+        }
         physics.simulateWorld();
         addEvent(ProtoUtils.updateGameplay((Room) room), EventFilter.everyone);
         room.players.forEach(player -> physics.simulateTank(((Player) player).getTank()));

@@ -9,7 +9,7 @@ public class TankModel_Default extends TankModel {
     private static final float HEIGHT = 17f;
     private static final long SHOOTING_DELAY = 1500l;
 
-    private static final float SPEED_MULTIPLIER = 1.0f;
+    private static final float SPEED_MULTIPLIER = 12.0f;
     private static final float TURNING_SPEED_MULTIPLIER = 1.0f;
     private static final float BARREL_TURNING_SPEED_MULTIPLIER = 1.0f;
     private static final float BREAKING_SPEED_MULTIPLIER = 1.0f;

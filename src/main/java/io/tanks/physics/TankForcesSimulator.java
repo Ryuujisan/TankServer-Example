@@ -18,7 +18,7 @@ public class TankForcesSimulator {
         if (tank.isAccelerating()) {
             Body body = tank.getBody();
             float difference = (Utils.degreesToRadians(tank.getDirectionalVectorAngle())) -
-                    body.getAngle() - Physics.PI/2;
+                    body.getAngle();
             difference = Utils.normalize(difference, -PI, PI);
             difference = Math.signum(difference) * Math.min(tank.getModel().getMaxTurningSpeed()
                     * (dt / FPS60), Math.abs(difference));

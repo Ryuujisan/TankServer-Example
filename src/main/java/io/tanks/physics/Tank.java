@@ -50,7 +50,7 @@ public class Tank {
     }
 
     public float getDirectionalVectorAngle() {
-        return angle(directionalVector);
+        return angle(directionalVector) - Physics.PI / 2;
     }
 
     public void setAimingVector(float x, float y) {
