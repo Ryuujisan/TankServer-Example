@@ -49,7 +49,7 @@ public class Barrel {
     private Vec2 calculateBulletPosition() {
         float distanceFromCenter = 30f;
         Vec2 center = getPosition();
-        Vec2 move = Utils.getVector(Utils.degreesToRadians(getAngleInDegrees()), distanceFromCenter);
+        Vec2 move = Utils.getVector(Utils.degreesToRadians(getAngleInDegrees()), distanceFromCenter / Physics.PPM);
         Vec2 position = center.add(move);
         return position;
     }
@@ -76,7 +76,7 @@ public class Barrel {
     }
 
     public float getAngleInDegrees() {
-        return angle - 90;
+        return angle;
     }
 
     public float getAngleInRadians() {

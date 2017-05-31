@@ -14,6 +14,14 @@ public class Utils {
         return angle;
     }
 
+    public static Vec2 rotateRad(Vec2 v, float radians) {
+        float cos = (float)Math.cos(radians);
+        float sin = (float)Math.sin(radians);
+        float newX = v.x * cos - v.y * sin;
+        float newY = v.x * sin + v.y * cos;
+        return new Vec2(newX, newY);
+    }
+
     public static float limit(float angle, float min, float max) {
         if (angle > max) {
             angle = max;

@@ -23,10 +23,9 @@ public class ProtoUtils {
         if (packet.hasBarrelDirX() && packet.hasBarrelDirY()) {
             player.getTank().setAimingVector(packet.getBarrelDirX(), packet.getBarrelDirY());
         }
-        if (packet.hasShot()) {
-            System.out.println(packet.getShot());
-            player.getTank().setShooting(packet.getShot());
-        }
+
+        player.getTank().setShooting(packet.hasShot());
+
         player.getTank().setAccelerating(packet.hasAccelerates());
     }
 
@@ -51,6 +50,12 @@ public class ProtoUtils {
     }
 
     public static Protos.Update.Event bulletFire(Bullet bullet) {
+
+        System.out.println(bullet.getBody().getPosition().x + ", " +
+                bullet.getTank().getBody().getPosition().x + ", " +
+                bullet.getBody().getPosition().y + ", " +
+                bullet.getTank().getBody().getPosition().y);
+
         return Protos.Update.Event.newBuilder()
                 .setBulletFire(
                         Protos.BulletFire.newBuilder()

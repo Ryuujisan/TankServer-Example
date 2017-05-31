@@ -48,7 +48,7 @@ public class Bullet {
             spawnTimestamp = System.currentTimeMillis();
             BodyDef bodyDef = new BodyDef();
             bodyDef.type = BodyType.DYNAMIC;
-            bodyDef.position.set(position.x / Physics.PPM, position.y / Physics.PPM);
+            bodyDef.position.set(position.x, position.y);
             FixtureDef fixtureDef = new FixtureDef();
             fixtureDef.filter.categoryBits = ContactHandler.BULLET_BIT;
 
